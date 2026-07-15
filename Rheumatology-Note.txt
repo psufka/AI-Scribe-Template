@@ -1,53 +1,90 @@
-**Subjective:**
+Create a concise rheumatology clinic note from the transcript.
 
-[Chief complaint]
+Rules:
 
-[HPI: Begin with a concise narrative summary of the patient's reported rheumatologic symptoms and concerns, including specific joints affected, pain, swelling, stiffness, functional impacts, and any mentions of side effects from current treatments. Phrase as "Patient states that...", incorporating details like onset, duration, severity, pattern (e.g., symmetrical), aggravating factors, morning stiffness, fatigue, systemic symptoms, or responses to treatments only if explicitly available.]
+* Output only the note. No explanations.
+* Use only information explicitly stated in the transcript.
+* Omit any section or item with no available information.
+* Do not invent normal findings, ROS negatives, adherence, medication tolerance, exam findings, labs, imaging, or counseling.
+* Keep wording concise. Prefer short phrases and bullets.
+* Avoid long narrative. No duplicated information.
+* Use numerals for numbers and follow-up timeframes.
+* Diagnosis capitalization: capitalize only the first word unless a proper name, e.g., “Rheumatoid arthritis,” “Sjogren’s syndrome.”
 
-[If additional non-rheumatologic concerns or plans are mentioned (e.g., upcoming surgeries, follow-ups with other specialists, travel, controlled conditions, medication tolerance, insurance or access barriers, or upcoming procedures that may affect treatment such as holding biologics pre-surgery), add a separate paragraph starting with "Additionally, patient notes that..." to summarize them briefly. Omit if not available.]
+**Subjective**
 
-[List all symptoms that patient specifically denies. Phrase as "Patient denies...". Do not include anything that was not specifically asked about.]
+**Chief complaint:** [chief complaint]
 
-[Investigations with results, including laboratory tests, imaging studies, etc. Make note if imaging done today is reviewed with patient. Mention only if available.]
+**HPI:** Patient states that [1 concise paragraph summarizing rheumatologic symptoms/concerns, including joints affected, pain, swelling, stiffness, function, onset/duration/pattern/severity, treatment response, and side effects only if stated].
 
-[Past medical and surgical history, highlighting any previous rheumatologic diagnoses, treatments, surgeries, hospitalizations, outcomes, etc. Mention only if available.]
+If non-rheumatologic issues are mentioned, add:
+Additionally, patient notes that [brief summary of surgeries, specialist follow-up, travel, insurance/access issues, upcoming procedures, or treatment-holding plans].
 
-[Current medications, including any disease-modifying antirheumatic drugs (DMARDs), biologic agents, pain management medications, supplements, etc. Mention only if available.]
+**Pertinent negatives:** Patient denies [only symptoms specifically denied or asked about].
+**Recent studies:** [labs/imaging reviewed, including whether imaging was reviewed with patient today].
+**Relevant history:** [rheumatologic diagnoses, prior treatments, surgeries, hospitalizations, outcomes].
+**Medications:** [current medications, doses if stated].
+**Adherence/access:** [missed doses, intolerance, refill issues, PA/insurance barriers].
+**Allergies:** [allergies/reactions].
+**Social/family history:** [only relevant details stated].
 
-[Social history, focusing on lifestyle factors, occupation, smoking, alcohol use, family history of rheumatic diseases, etc. Mention only if available.]
+**Objective**
 
-[Allergies, including allergies to medications, particularly NSAIDs or biologics, etc. Mention only if available.]
+**Vitals:** [only if available].
 
-[Note any reported medication adherence issues, missed doses, difficulty obtaining medications, or prior authorization problems if mentioned. Omit if not discussed.]
----
-**Objective:**
+[Use only applicable exam sections.]
 
-[Vitals. Mention only if available.]
-[First list physical examination findings that are not related to musculoskeletal exam, if available. Label each section such as 'HEENT:', 'Cardiovascular:', 'Lungs:', 'Abdomen:', 'Neuro:', etc.]
-[Skin examination for rheumatologic findings, nail changes, etc. Mention only if applicable and if available. Start this section with 'Skin:' if used.]
-[Musculoskeletal physical examination findings, including joint inspection, palpation, assessment of range of motion, identification of synovitis, bursitis, tenosynovitis, etc. Mention if available. Start this section with 'MSK:' if used.]
----
-**Injections:**
+**General:** [findings].
+**HEENT:** [findings].
+**Cardiovascular:** [findings].
+**Lungs:** [findings].
+**Abdomen:** [findings].
+**Neuro:** [findings].
+**Skin:** [rashes, psoriasis, nail changes, ulcers, nodules, tophi, Raynaud’s changes, etc.].
+**MSK:** [joint tenderness/swelling/synovitis, ROM, deformities, enthesitis, dactylitis, bursitis, tenosynovitis, gait, strength if stated].
 
-[If any injections were performed, list: joint injected, laterality (right vs left), medication and dose, anesthetic used, and guidance method (ultrasound-guided vs landmark) if mentioned. Note if consent was obtained. Omit section entirely if no injections performed.]
----
-**Assessment & Plan:**
+**Injections**
 
-[Rheumatologic issue or condition (capitalize only the first word in the diagnosis, unless it is a proper name such as "Sjogren's syndrome").] [Concise assessment narrative, including the likely diagnosis, key subjective/objective findings, and rationale. Keep to 1-2 sentences. Include differential diagnosis only if explicitly mentioned in the transcript; otherwise omit.]
-[Medical treatment plan: Use bullets for actions. First, any medications to stop (if mentioned). Next, new medications to start, including dosage, frequency, and any discussed details like side effects or usage. Just use the phrase "Discussed usage and side effects." Next, medications to continue, noting if long-term. Last, as-needed medications (if mentioned). Example bullet: - Start/Stop/Continue [Drug name] [dose] [frequency]. [Any additional details]. Omit sections not explicitly mentioned.]
-After medication bullets, add a bullet for '- Investigations planned: [details]' only if explicitly mentioned; otherwise omit.
-After medication bullets, add bullets for: - Lifestyle modifications [details] (only if explicitly mentioned; otherwise omit). - Physical/occupational therapy referrals [details] (only if explicitly mentioned; otherwise omit). - Referrals to specialists [details] (only if explicitly mentioned; otherwise omit).
+Include this section only if an injection was performed.
 
-[Additional Rheumatologic Issue or Condition.]
-[Repeat the above structure briefly for each additional issue only if explicitly identified; otherwise omit.]
+[Joint/bursa/tendon sheath injected], [laterality]: [medication and dose]; [anesthetic if stated]; [ultrasound-guided or landmark if stated]. Consent [obtained if stated]. Tolerated [only if stated].
 
-[Write follow-up at the end in this format: 'Follow up [timeframe mentioned in visit].' Omit if not mentioned. Use numerals (eg "1" instead of "one")]
+**Assessment & Plan**
 
-[Additional Notes (only if explicitly mentioned and not covered above): Patient education, symptom monitoring instructions, or addressed concerns. Keep concise.]
+For each active problem, use this format:
 
-[G5521 code. If the patient has a chronic inflammatory arthritis (rheumatoid arthritis, psoriatic arthritis, spondyloarthritis, ankylosing spondylitis, lupus, gout) or is on long-term medications (DMARDs, biologics, JAK inhibitors, gout treatment), include this exact phrase at the end of the note:]
+**1. [Diagnosis/problem]**
+[1 sentence assessment: disease status, key supporting findings, and rationale. Include differential only if explicitly discussed.]
 
-"The longitudinal plan of care for the patient's diagnosis(es)/condition(s) as documented was/were addressed during this visit. Given the increased complexity involved, I will continue to provide support in the ongoing management and continuity of care for these condition(s)."
----
-**To do list:**
-- [At the bottom of the document, list all things mentioned to be ordered or completed: labs, imaging, referrals, prior authorizations, medication refills, patient education materials, and any other follow-up tasks. Use bullet points for each.]
+* Stop [medication] [dose/frequency] if stated.
+* Start [medication] [dose/frequency] if stated. Discussed usage and side effects.
+* Continue [medication] [dose/frequency] if stated.
+* Use [PRN medication] [dose/frequency] as needed if stated.
+* Investigations planned: [labs/imaging/tests] if stated.
+* Lifestyle modifications: [details] if stated.
+* PT/OT: [details] if stated.
+* Referral: [specialty/reason] if stated.
+* Procedure/surgery coordination: [biologic hold, perioperative plan, or other details] if stated.
+* Monitoring/education: [only if explicitly discussed].
+
+Repeat only for additional problems clearly addressed.
+
+**Follow up:** [timeframe stated].
+
+**G2211 longitudinal care language**
+
+If the patient has chronic inflammatory arthritis, lupus, gout, or another longitudinal rheumatologic condition, or is on long-term DMARDs, biologics, JAK inhibitors, or gout therapy, include this exact statement at the end:
+
+The longitudinal plan of care for the patient's diagnosis(es)/condition(s) as documented was/were addressed during this visit. Given the increased complexity involved, I will continue to provide support in the ongoing management and continuity of care for these condition(s).
+
+**To do list**
+
+Include only concrete tasks mentioned in the transcript.
+
+* [Labs to order]
+* [Imaging to order]
+* [Medication refills/new prescriptions]
+* [Prior authorization/insurance task]
+* [Referral]
+* [Patient message/education material]
+* [Follow-up scheduling]

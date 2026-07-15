@@ -11,6 +11,12 @@ Feel free to edit and redistribute, as per standard [MIT License](https://github
 
 ## Updates
 
+**2026-07-15**
+- Rewrote the template for shorter, more structured rheumatology notes
+- Strengthened explicit-only documentation rules to prevent invented findings, denials, tests, tolerance, or counseling
+- Added labeled subjective, objective, injection, assessment/plan, and task-list fields with omit-if-empty behavior
+- Corrected the longitudinal-care add-on label from `G5521` to `G2211`
+
 **2026-02-07**
 - Added `**Subjective:**` header for clean SOAP note structure
 - Standardized all instructions to bracket notation (removed inconsistent parenthetical formatting)

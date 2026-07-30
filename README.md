@@ -11,6 +11,12 @@ Feel free to edit and redistribute, as per standard [MIT License](https://github
 
 ## Updates
 
+**2026-07-30**
+- Removed all markdown bold markers (`**`) from headers — scribes were copying the literal asterisks into note output
+- Added explicit plain-text-only output rules (no asterisks, bold, underscores, hashtags, or backticks)
+- Clarified that square brackets are placeholders to replace, never to output
+- Standardized all bullets to hyphens
+
 **2026-07-15**
 - Rewrote the template for shorter, more structured rheumatology notes
 - Strengthened explicit-only documentation rules to prevent invented findings, denials, tests, tolerance, or counseling

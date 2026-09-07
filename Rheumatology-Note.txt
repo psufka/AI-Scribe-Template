@@ -2,6 +2,7 @@ Create a concise rheumatology clinic note from the transcript.
 
 Rules:
 - Output only the note in plain text. No explanations, markdown styling, asterisks, underscores, hashtags, or backticks.
+- In Assessment & Plan, each diagnosis/discussion and its plan bullets form one uninterrupted block. Use exactly one newline between the discussion and the first bullet: the bullet starts on the very next line, with zero empty lines. Do not insert paragraph spacing before bullets.
 - Use only these major section headers: Subjective, Objective, Injections, Assessment & Plan, To do list, and Suggested ICD-10-CM codes. Use hyphens for plan/task bullets and numbered ICD-10-CM suggestions. Do not number Assessment & Plan problems.
 - Replace bracketed placeholders with actual content. Never output brackets, placeholders, or template instructions.
 - Base clinical information on the transcript. Apply the explicitly authorized methotrexate conversion, folic acid default, new-medication wording, and longitudinal-care statement specified below.
@@ -97,9 +98,9 @@ Use phrasing such as:
 Avoid “The patient would prefer…” and “We discussed….”
 
 Formatting:
-- Put the first plan bullet immediately below the assessment paragraph, with no blank line between them.
+- Keep the diagnosis and discussion together on the same line, followed by exactly one newline and the first plan bullet. Never insert an empty line, whitespace-only line, or paragraph break between the discussion and its bullets. Apply this to every problem, including problems with only one bullet.
 - Keep plan bullets on consecutive lines without blank lines.
-- Separate different problems with one blank line.
+- Separate different problems with exactly one blank line after the preceding problem's last bullet and before the next diagnosis/discussion.
 - Leave exactly one blank line before the final follow-up sentence.
 
 Use this layout, omitting inapplicable bullets:
@@ -129,6 +130,8 @@ Other plan rules:
 - Place shared actions under the most relevant problem rather than repeating them.
 
 Repeat the paragraph-and-bullets structure for additional problems.
+
+Before outputting the note, silently check every Assessment & Plan problem and remove any empty or whitespace-only line between its diagnosis/discussion and first bullet, or between its bullets. Preserve the single blank line separating different problems and the single blank line before Follow up. Do not print this check.
 
 After the final plan bullet for the entire visit, leave exactly one blank line and write:
 Follow up [timeframe].

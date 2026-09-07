@@ -1,93 +1,180 @@
 Create a concise rheumatology clinic note from the transcript.
 
 Rules:
-
-- Output only the note. No explanations.
-- Output plain text only. Never use markdown formatting in the note: no asterisks, no bold, no underscores, no hashtags, no backticks. Write section headers exactly as shown below, as plain text.
-- Square brackets below are placeholders describing what to write. Replace each with actual content from the transcript. Never output brackets or placeholder text.
-- Use a hyphen for each bullet.
-- Use only information explicitly stated in the transcript.
-- Omit any section or item with no available information.
-- Do not invent normal findings, ROS negatives, adherence, medication tolerance, exam findings, labs, imaging, or counseling.
-- Keep wording concise. Prefer short phrases and bullets.
-- Avoid long narrative. No duplicated information.
-- Use numerals for numbers and follow-up timeframes.
-- Diagnosis capitalization: capitalize only the first word unless a proper name, e.g., “Rheumatoid arthritis,” “Sjogren’s syndrome.”
+- Output only the note in plain text. No explanations, markdown styling, asterisks, underscores, hashtags, or backticks.
+- Use the section headers below, hyphens for bullets, and numbered ICD-10-CM suggestions. Do not number Assessment & Plan problems.
+- Replace bracketed placeholders with actual content. Never output brackets, placeholders, or template instructions.
+- Base clinical information on the transcript. Apply the explicitly authorized methotrexate conversion, folic acid default, new-medication wording, and longitudinal-care statement specified below.
+- Omit missing information and empty sections without writing “not discussed” or “not available.”
+- Preserve clinically relevant details while removing repetition, filler, and unrelated conversation.
+- Use implied subjects and symptom-focused sentences. Avoid “Patient,” “the patient,” and personal pronouns in routine narrative. Prefer “Reports…,” “Notes…,” “Describes…,” “Denies…,” “Works as…,” “Prefers…,” and “Interested in….” Brief clinical sentence fragments are acceptable.
+- Use “patient” only when necessary for clear attribution, such as imaging reviewed with the patient. Preserve the exact longitudinal-care statement below.
+- Keep reported symptoms and concerns distinguishable from clinician findings and conclusions. Do not turn a reported experience into an established diagnosis.
+- Preserve laterality, chronology, medication doses/frequencies, and diagnostic uncertainty. Distinguish completed actions from future plans.
+- Never invent normal findings, symptom denials, adherence, tolerance, test results, personal imaging review, consent, or procedure outcomes. An unanswered question does not establish a negative.
+- Correct clear medication-name transcription errors when the spoken name and clinical context identify the intended medication. Use the spelling reference below only to correct medications actually mentioned; never introduce medications from this list.
+- Known corrections: “Symponi” → “Simponi.” When referring to lubricating eye drops or artificial tears, “Cystaine” or “Systaine” → “Systane.”
+- Generic spelling reference: methotrexate, hydroxychloroquine, sulfasalazine, leflunomide, azathioprine, mycophenolate mofetil, colchicine, allopurinol, febuxostat, bimekizumab, etanercept, adalimumab, infliximab, golimumab, certolizumab pegol.
+- Brand spelling reference: Plaquenil, Arava, Enbrel, Humira, Remicade, Simponi, Simponi Aria, Cimzia, Orencia, Actemra, Kevzara, Xeljanz, Rinvoq, Otezla, Cosentyx, Taltz, Skyrizi, Tremfya, Benlysta, Saphnelo, CellCept, Myfortic, Prolia, Evenity, Bimzelx, Amjevita, Cyltezo, Hyrimoz, Hadlima, Hulio, Abrilada, Yuflyma, Simlandi, Inflectra, Renflexis, Avsola.
+- Preserve brand versus generic naming as dictated. Preserve explicitly stated biosimilar names, product variants, formulations, routes, and release types. Do not replace a named biosimilar with its reference brand or add an unspecified formulation.
+- Do not use the diagnosis alone to choose a medication name. If the intended medication remains ambiguous, preserve that uncertainty rather than substituting a familiar name.
+- Use numerals for numbers and timeframes.
+- Capitalize only the first word of diagnoses unless a proper name, e.g., “Rheumatoid arthritis,” “Sjogren’s syndrome.”
 
 Subjective
 
-Chief complaint: [chief complaint]
+Chief complaint: [Brief reason for visit.]
 
-HPI: Patient states that [1 concise paragraph summarizing rheumatologic symptoms/concerns, including joints affected, pain, swelling, stiffness, function, onset/duration/pattern/severity, treatment response, and side effects only if stated].
+HPI
 
-If non-rheumatologic issues are mentioned, add:
-Additionally, patient notes that [brief summary of surgeries, specialist follow-up, travel, insurance/access issues, upcoming procedures, or treatment-holding plans].
+Write the HPI using the following order. Begin the first paragraph with “HPI:”. Keep subsequent paragraphs within the HPI without additional subheadings. Omit any paragraph or sentence without available information.
 
-Pertinent negatives: Patient denies [only symptoms specifically denied or asked about].
-Recent studies: [labs/imaging reviewed, including whether imaging was reviewed with patient today].
-Relevant history: [rheumatologic diagnoses, prior treatments, surgeries, hospitalizations, outcomes].
-Medications: [current medications, doses if stated].
-Adherence/access: [missed doses, intolerance, refill issues, PA/insurance barriers].
-Allergies: [allergies/reactions].
-Social/family history: [only relevant details stated].
+1. Current symptoms and interval history
+
+[Short paragraph(s) describing symptoms and interval changes, including affected joints, pain, swelling, stiffness, function, onset/duration, pattern, and severity as stated. Include the current medication regimen actually being taken, treatment response, side effects, adherence/access issues, and relevant medical/surgical history. Include other concerns, specialist follow-up, procedures, or travel when relevant.]
+
+Use implied subjects, such as:
+“Reports ongoing hand pain and morning stiffness. Notes improvement since starting treatment. Symptoms worsen with prolonged activity.”
+
+Treatment preferences and interests expressed by the patient may appear here, such as:
+“Prefers non-medication options due to chronic UTI.”
+“Interested in SetPoint.”
+
+Do not describe treatment options discussed by the clinician, comparisons between therapies, recommendations, counseling, treatment selection, or today’s medication changes in the HPI. These belong in Assessment & Plan, even when a treatment was considered but not selected.
+
+For example, “Actemra or Kevzara discussed as potential treatments” belongs only in Assessment & Plan. A brief statement of interest in a treatment may remain in the HPI; discussion of suitability, availability, risks, benefits, or next steps belongs in Assessment & Plan.
+
+Current medications in the HPI reflect treatment being taken before today’s plan. Do not present a new recommendation as an existing medication.
+
+2. Prior treatments
+
+[Use a separate paragraph to summarize previous treatment trials, benefits, inadequate responses, adverse effects, and reasons for discontinuation. Include duration, repeated trials, doses, or access barriers when stated and relevant.]
+
+Begin naturally with “Prior treatments include…” or “Previously tried….” Do not add a “Prior treatments:” subheading.
+
+Consolidate historical treatment trials into this paragraph rather than scattering them throughout the HPI. Keep the current regimen and its response in the opening paragraph(s). Do not include today’s proposed treatments here.
+
+3. Explicit symptom denials
+
+Denies [only explicitly denied symptoms].
+
+4. Labs and imaging
+
+[Briefly summarize labs and imaging discussed, including dates, sites/laterality, and relevant results when stated. Accurately distinguish studies ordered, completed, or reviewed.]
+
+For X-rays ordered today and personally reviewed with the patient, use:
+“X-rays of [site(s) and laterality] were ordered today and personally reviewed with the patient, demonstrating [findings].”
+Include each clause only when supported. If only ordered, write “X-rays of [site(s) and laterality] ordered today.” Never imply results or personal review from an order alone.
+
+5. Social and family history
+
+End the HPI with a brief social/family history paragraph when stated:
+“Social history is significant for [relevant lifestyle, smoking, alcohol, or living-situation details]. Works as [occupation]. Family history is significant for [conditions and affected relatives].”
+
+Adapt wording naturally and omit any sentence or detail not provided. Personal medical conditions belong in the medical history, not social or family history.
+
+Allergies: [Allergies and reactions, only if stated.]
 
 Objective
 
-Vitals: [only if available].
+Vitals: [Only stated values.]
 
-[Use only applicable exam sections.]
-
-General: [findings].
-HEENT: [findings].
-Cardiovascular: [findings].
-Lungs: [findings].
-Abdomen: [findings].
-Neuro: [findings].
-Skin: [rashes, psoriasis, nail changes, ulcers, nodules, tophi, Raynaud’s changes, etc.].
-MSK: [joint tenderness/swelling/synovitis, ROM, deformities, enthesitis, dactylitis, bursitis, tenosynovitis, gait, strength if stated].
+Include only exam categories with stated findings. Keep each to a short line:
+General: [Findings.]
+HEENT: [Findings.]
+Cardiovascular: [Findings.]
+Lungs: [Findings.]
+Abdomen: [Findings.]
+Neuro: [Findings.]
+Skin: [Relevant skin, nail, vascular, or mucosal findings.]
+MSK: [Joint distribution/laterality, tenderness, swelling, synovitis, ROM, deformities, enthesitis, dactylitis, soft-tissue findings, gait, and strength as stated.]
 
 Injections
 
-Include this section only if an injection was performed.
-
-[Joint/bursa/tendon sheath injected], [laterality]: [medication and dose]; [anesthetic if stated]; [ultrasound-guided or landmark if stated]. Consent [obtained if stated]. Tolerated [only if stated].
+Include only if an injection was performed. Use one concise entry per site:
+[Site and laterality]: [Medication and dose]; [anesthetic]; [guidance method]. [Consent and tolerance/outcome only if stated.]
 
 Assessment & Plan
 
-For each active problem, use this format:
+Include only problems assessed or managed during this visit.
 
-1. [Diagnosis/problem]
-[1 sentence assessment: disease status, key supporting findings, and rationale. Include differential only if explicitly discussed.]
+Begin each problem with the diagnosis followed by a period and a concise assessment paragraph on the same line. Do not number problems or place the diagnosis on a separate line.
 
-- Stop [medication] [dose/frequency] if stated.
-- Start [medication] [dose/frequency] if stated. Discussed usage and side effects.
-- Continue [medication] [dose/frequency] if stated.
-- Use [PRN medication] [dose/frequency] as needed if stated.
-- Investigations planned: [labs/imaging/tests] if stated.
-- Lifestyle modifications: [details] if stated.
-- PT/OT: [details] if stated.
-- Referral: [specialty/reason] if stated.
-- Procedure/surgery coordination: [biologic hold, perioperative plan, or other details] if stated.
-- Monitoring/education: [only if explicitly discussed].
+Capture disease activity, treatment response, key findings, treatment options discussed, rationale, and preferences when stated. Place today’s treatment discussions, recommendations, counseling, and decisions here. Include diagnostic interpretations or differential diagnoses only as discussed.
 
-Repeat only for additional problems clearly addressed.
+Use enough short sentences to preserve decision-making without retelling the HPI. Refer to prior treatment failures only when needed to explain the current decision; do not repeat the entire treatment history.
 
-Follow up: [timeframe stated].
+Use phrasing such as:
+“Improved since starting [medication], but ongoing [findings]. Discussed adding [options]. Prefers to start [selected treatment].”
+Avoid “The patient would prefer…” and “We discussed….”
 
-G2211 longitudinal care language
+Formatting:
+- Put the first plan bullet immediately below the assessment paragraph, with no blank line between them.
+- Keep plan bullets on consecutive lines without blank lines.
+- Separate different problems with one blank line.
+- Leave exactly one blank line before the final follow-up sentence.
 
-If the patient has chronic inflammatory arthritis, lupus, gout, or another longitudinal rheumatologic condition, or is on long-term DMARDs, biologics, JAK inhibitors, or gout therapy, include this exact statement at the end:
+Use this layout, omitting inapplicable bullets:
+[Diagnosis/problem]. [Concise assessment and treatment decision.]
+- Start [new medication and complete dosing/titration instructions]. Discussed usage and side effects.
+- Continue [medication and dose/frequency], [medication and dose/frequency].
+- [Prednisone regimen or taper.]
+- See lab workup including [labs explicitly mentioned]. [Collection timing or repeat-testing instructions, if stated.]
+- [Imaging ordered or planned and timing, if stated.]
+- [Other management actions.]
+
+Medication rules apply throughout the note:
+- Report oral methotrexate doses in mg, not tablet counts. Use 2.5mg per tablet unless another strength is explicitly stated. Convert the stated tablet count to the total dose: 4 tablets = 10mg, 6 tablets = 15mg, and 8 tablets = 20mg. Preserve the stated frequency and titration. Do not apply this conversion to injectable methotrexate or invent a dose when none is provided.
+- When starting folic acid for methotrexate supplementation, use “Start folic acid 1mg daily.” This is an authorized template default when no dose or frequency is specified; an explicitly dictated regimen takes precedence. Include it only when starting folic acid was discussed.
+- Keep routine folic acid supplementation to that short action-and-dose line. Do not automatically append a side-effect explanation or the new-medication counseling sentence.
+- Give each newly started medication its own bullet, with its complete titration on that line.
+- For other medications newly discussed as treatment options, include exactly “Discussed usage and side effects.” Place it at the end of the start bullet if prescribed, or with the assessment discussion if considered but not started. This sentence belongs only in Assessment & Plan.
+- Do not add that sentence solely because an existing medication is continued, adjusted, tapered, held, or stopped.
+- Within each problem, combine all unchanged medications being continued into one “Continue…” bullet, except prednisone.
+- Prednisone always gets its own bullet, even when continued unchanged. Keep the entire regimen or taper on that line. Include taper intervals and “as tolerated” only if stated.
+- Put changes to other existing medications in separate bullets as needed.
+
+Other plan rules:
+- For labs stated as ordered, write one bullet: “See lab workup including [only labs explicitly mentioned].” Append any stated collection timing or repeat-testing instructions to the same line. If no specific labs are named, write “See lab workup.” Do not infer additional tests.
+- Include discussed referrals, PT/OT, lifestyle changes, procedure coordination, monitoring, education, and earlier-return precautions.
+- Use direct action wording without category labels such as “Investigations planned” or “Lifestyle modifications.”
+- Place shared actions under the most relevant problem rather than repeating them.
+
+Repeat the paragraph-and-bullets structure for additional problems.
+
+After the final plan bullet for the entire visit, leave exactly one blank line and write:
+Follow up [timeframe].
+
+Use no colon. Write this once after all problems, and omit it if no timeframe is stated.
+
+When the transcript documents ongoing management of chronic inflammatory arthritis, lupus, gout, another longitudinal rheumatologic condition, or long-term DMARD, biologic, JAK inhibitor, or gout therapy, include this exact statement after Follow up, separated by a blank line and without an additional heading:
 
 The longitudinal plan of care for the patient's diagnosis(es)/condition(s) as documented was/were addressed during this visit. Given the increased complexity involved, I will continue to provide support in the ongoing management and continuity of care for these condition(s).
 
 To do list
 
-Include only concrete tasks mentioned in the transcript.
+Include only concrete outstanding tasks explicitly mentioned, using brief action bullets. Omit completed actions and routine plan restatements.
 
-- [Labs to order]
-- [Imaging to order]
-- [Medication refills/new prescriptions]
-- [Prior authorization/insurance task]
-- [Referral]
-- [Patient message/education material]
-- [Follow-up scheduling]
+- [Order specified labs/imaging.]
+- [Send prescription/refill.]
+- [Complete prior authorization or insurance task.]
+- [Place referral.]
+- [Send patient message or education material.]
+- [Arrange follow-up.]
+
+Omit unused bullets and omit the section when no outstanding tasks are stated.
+
+Suggested ICD-10-CM codes
+
+Place this section last, after the To do list when present.
+
+- Suggest valid ICD-10-CM codes for the encounter date based on documented diagnoses, symptoms, and care circumstances.
+- List the condition chiefly responsible for the services first, followed by other conditions affecting care. Honor code-specific sequencing instructions, including “code first” and “use additional code.”
+- Use the greatest specificity supported, including site and laterality. Use an appropriate unspecified code when details are absent; never invent specificity.
+- Do not code suspected, possible, or rule-out diagnoses as confirmed. Instead, code supported symptoms or findings when no diagnosis is established.
+- Do not separately code symptoms integral to a confirmed diagnosis unless instructed by coding conventions.
+- Include relevant medication-use or encounter codes only when supported. Omit unrelated history, duplicate codes, and CPT/HCPCS codes.
+- If a code cannot be identified reliably, omit it rather than guess.
+
+Format each suggestion as:
+1. [Code] - [Diagnosis or description]

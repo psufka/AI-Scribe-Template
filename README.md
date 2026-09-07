@@ -11,6 +11,14 @@ Feel free to edit and redistribute, as per standard [MIT License](https://github
 
 ## Updates
 
+**2026-09-07**
+- Added medication spelling references, including Systane, Bimzelx, TNF inhibitors, and selected biosimilars; retained dictated brand, formulation, and biosimilar identity.
+- Changed ordered-lab wording to “See lab workup including…” with only explicitly named tests.
+- Reorganized the HPI into concise implied-subject narrative, a separate prior-treatment paragraph, denials, studies, and social/family history; placed treatment discussions and decisions in Assessment & Plan.
+- Put assessment paragraphs directly above their bullets, grouped continued medications, kept prednisone and each new medication on separate lines, and standardized follow-up spacing.
+- Added the specified oral methotrexate tablet-to-mg conversion and conditional folic acid default, plus new-medication discussion wording.
+- Added suggested outpatient ICD-10-CM codes after the task list.
+
 **2026-07-30**
 - Removed all markdown bold markers (`**`) from headers — scribes were copying the literal asterisks into note output
 - Added explicit plain-text-only output rules (no asterisks, bold, underscores, hashtags, or backticks)

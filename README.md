@@ -12,6 +12,7 @@ Feel free to edit and redistribute, as per standard [MIT License](https://github
 ## Updates
 
 **2026-09-07**
+- Removed HPI instruction subheadings so studies and social/family details flow within the narrative; explicitly prohibited HPI category labels and missing-history statements.
 - Added medication spelling references, including Systane, Bimzelx, TNF inhibitors, and selected biosimilars; retained dictated brand, formulation, and biosimilar identity.
 - Changed ordered-lab wording to “See lab workup including…” with only explicitly named tests.
 - Reorganized the HPI into concise implied-subject narrative, a separate prior-treatment paragraph, denials, studies, and social/family history; placed treatment discussions and decisions in Assessment & Plan.

@@ -2,7 +2,7 @@ Create a concise rheumatology clinic note from the transcript.
 
 Rules:
 - Output only the note in plain text. No explanations, markdown styling, asterisks, underscores, hashtags, or backticks.
-- Use the section headers below, hyphens for bullets, and numbered ICD-10-CM suggestions. Do not number Assessment & Plan problems.
+- Use only these major section headers: Subjective, Objective, Injections, Assessment & Plan, To do list, and Suggested ICD-10-CM codes. Use hyphens for plan/task bullets and numbered ICD-10-CM suggestions. Do not number Assessment & Plan problems.
 - Replace bracketed placeholders with actual content. Never output brackets, placeholders, or template instructions.
 - Base clinical information on the transcript. Apply the explicitly authorized methotrexate conversion, folic acid default, new-medication wording, and longitudinal-care statement specified below.
 - Omit missing information and empty sections without writing “not discussed” or “not available.”
@@ -25,13 +25,9 @@ Subjective
 
 Chief complaint: [Brief reason for visit.]
 
-HPI
+HPI: [Short paragraph(s) describing symptoms and interval changes, including affected joints, pain, swelling, stiffness, function, onset/duration, pattern, and severity as stated. Include the current medication regimen actually being taken, treatment response, side effects, adherence/access issues, and relevant medical/surgical history. Include other concerns, specialist follow-up, procedures, or travel when relevant.]
 
-Write the HPI using the following order. Begin the first paragraph with “HPI:”. Keep subsequent paragraphs within the HPI without additional subheadings. Omit any paragraph or sentence without available information.
-
-1. Current symptoms and interval history
-
-[Short paragraph(s) describing symptoms and interval changes, including affected joints, pain, swelling, stiffness, function, onset/duration, pattern, and severity as stated. Include the current medication regimen actually being taken, treatment response, side effects, adherence/access issues, and relevant medical/surgical history. Include other concerns, specialist follow-up, procedures, or travel when relevant.]
+Write the entire HPI as continuous narrative prose, using paragraph breaks where helpful and a separate paragraph for prior treatments. Begin the first paragraph with “HPI:” and do not repeat that label. Do not add subheadings, category labels, bullets, or numbering anywhere within the HPI. In particular, never output “Labs and imaging” or “Social and family history” as headings or labels. Follow the narrative order described below, omitting any paragraph or sentence without available information.
 
 Use implied subjects, such as:
 “Reports ongoing hand pain and morning stiffness. Notes improvement since starting treatment. Symptoms worsen with prolonged activity.”
@@ -46,32 +42,24 @@ For example, “Actemra or Kevzara discussed as potential treatments” belongs 
 
 Current medications in the HPI reflect treatment being taken before today’s plan. Do not present a new recommendation as an existing medication.
 
-2. Prior treatments
-
-[Use a separate paragraph to summarize previous treatment trials, benefits, inadequate responses, adverse effects, and reasons for discontinuation. Include duration, repeated trials, doses, or access barriers when stated and relevant.]
+After the opening paragraph(s), use a separate paragraph to summarize previous treatment trials, benefits, inadequate responses, adverse effects, and reasons for discontinuation. Include duration, repeated trials, doses, or access barriers when stated and relevant.
 
 Begin naturally with “Prior treatments include…” or “Previously tried….” Do not add a “Prior treatments:” subheading.
 
 Consolidate historical treatment trials into this paragraph rather than scattering them throughout the HPI. Keep the current regimen and its response in the opening paragraph(s). Do not include today’s proposed treatments here.
 
-3. Explicit symptom denials
+Next, include explicitly denied symptoms in prose: “Denies [only explicitly denied symptoms].”
 
-Denies [only explicitly denied symptoms].
-
-4. Labs and imaging
-
-[Briefly summarize labs and imaging discussed, including dates, sites/laterality, and relevant results when stated. Accurately distinguish studies ordered, completed, or reviewed.]
+Then briefly summarize labs and imaging discussed as part of the HPI narrative, including dates, sites/laterality, and relevant results when stated. Accurately distinguish studies ordered, completed, or reviewed. Do not introduce these details with a heading or category label.
 
 For X-rays ordered today and personally reviewed with the patient, use:
 “X-rays of [site(s) and laterality] were ordered today and personally reviewed with the patient, demonstrating [findings].”
 Include each clause only when supported. If only ordered, write “X-rays of [site(s) and laterality] ordered today.” Never imply results or personal review from an order alone.
 
-5. Social and family history
-
-End the HPI with a brief social/family history paragraph when stated:
+End the HPI with relevant social and family history details in narrative prose when stated, without a heading or category label:
 “Social history is significant for [relevant lifestyle, smoking, alcohol, or living-situation details]. Works as [occupation]. Family history is significant for [conditions and affected relatives].”
 
-Adapt wording naturally and omit any sentence or detail not provided. Personal medical conditions belong in the medical history, not social or family history.
+Adapt wording naturally and omit any sentence or detail not provided. Never write “Family history not discussed,” “Social history not discussed,” or similar statements about missing history. Personal medical conditions belong in the medical history, not social or family history.
 
 Allergies: [Allergies and reactions, only if stated.]
 
